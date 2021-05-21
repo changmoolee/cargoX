@@ -1,0 +1,35 @@
+<html>
+<body id='yeah'>
+  <ul>
+    <li><a href="./532">html</a></li>
+    <li><a href="./533">css</a></li>
+    <li><a href="./534">JavaScript</a>
+        <ul>
+            <li><a href="./535">JavaScript Core</a></li>
+            <li><a href="./536">DOM</a></li>
+            <li><a href="./537">BOM</a></li>
+        </ul>
+    </li>
+</ul>
+  <script>
+function traverse(target,callback){
+  if(target.nodeType===1){//1 = ELEMENT_NODE 인것만 출
+    if(target.nodeName==='A') //LINK NODE만이 살아남을것
+      /*if문 바로 다음 한 줄 코드는 암시적으로 if문의 내용이라고
+      판단하여 중괄호{}생략 가능합니다.
+      두 줄 부터 중괄호를 쳐서 if문 안의 내용이라는 것을 명시해줘야
+      하구요. for문, while문도 마찬가지 입니다.*/
+      callback(target);
+      var rollin = target.childNodes;
+      for(var i= 0; i<rollin.length; i++){
+        traverse(rollin[i], callback);
+      }     
+    }
+  }
+
+traverse(document.getElementById('yeah'), function(element){
+  console.log(element);
+});
+  </script>
+</body>
+</html>

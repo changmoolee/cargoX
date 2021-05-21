@@ -1,0 +1,22 @@
+<html>
+<body>
+  <ul>
+    <li class='choco'>html</li>
+    <li>css</li>
+    <li id='vanila'>javascript
+      <ul>
+        <li>javacore</li>
+        <li class='choco'>dom</li>
+        <li class='choco'>bom</li>
+      </ul>
+    </li>
+  </ul>
+  <script src='lib/jquery/jquery-3.6.0.min.js'></script>
+  <script>
+    //$('.choco','#vanila').css('background-color','yellow');
+    //$('#vanila .choco').css('background-color','yellow');
+    //$('#vanila').find('.choco').css('background-color','yellow')
+    $('#vanila').css('color','blue').find('.choco').css('background-color','red');
+  </script>
+</body>
+</html>

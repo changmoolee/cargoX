@@ -1,0 +1,17 @@
+<hmtl>
+<a id='t1' href='속성 API.html'>속성 API</a>
+<body>
+<input id='t2' type="checkbox" checked='checked'>체킹
+<script src="lib/jquery/jquery-3.6.0.min.js"></script>
+<script>
+  var tax = $('#t1');
+    console.log(tax.attr('href'));// '속성 API.html'
+    console.log(tax.prop('href'));// file:///C:/Users/user/Desktop/'속성 API.html'
+  var max = $('#t2');
+    console.log(max.attr('checked')); //
+    console.log(max.prop('checked')); //
+
+</script>
+</body>
+
+</hmtl>

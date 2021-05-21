@@ -1,0 +1,28 @@
+<html>
+<body id='sab'>
+  <ul>
+    <li>html</li>
+    <li>css</li>
+    <li>java
+      <ul>
+        <li>script</li>
+        <li>dom</li>
+        <li>bom</li>
+      </ul>
+    </li>
+  </ul>
+  <script>
+    var cosmo = document.getElementById('sab');
+    console.log(cosmo.firstChild); // #text 왜냐하면 사이에 빈칸이 있기 때문
+    console.log(cosmo.firstChild.nextSibling); //  <ul>...</ul> 빈칸 다음
+    console.log(cosmo.firstChild.nextSibling.nextSibling);
+    // <script>...<script>
+    console.log(cosmo.firstChild.nextSibling.previousSibling);
+   // <ul>...<ul>
+    console.log(cosmo.firstChild.nextSibling.parentNode);
+    // <body>...<body>
+    console.log(cosmo.firstChild.nextSibling.parentNode.childNodes[1]);
+    // 2번째 이니까 <ul>...</ul> #text는 [0] 첫번째일때 나오고
+  </script>
+</body>
+</html>
